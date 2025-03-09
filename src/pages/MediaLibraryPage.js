@@ -15,7 +15,7 @@ const MediaLibraryPage = () => {
   }, [])
 
   return (
-    <div style={styles.page}>
+    <div className="api-section" div style={styles.page}>
       <h2>📸 NASA Image & Video Library</h2>
       <div style={styles.gallery}>
         {media.length > 0 ? (

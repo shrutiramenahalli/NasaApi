@@ -14,7 +14,7 @@ const EPICPage = () => {
   }, [])
 
   return (
-    <div style={styles.page}>
+    <div className="api-section" div style={styles.page}>
       <h2>🌍 Earth Polychromatic Imaging Camera (EPIC)</h2>
       <div style={styles.gallery}>
         {images.length > 0 ? (

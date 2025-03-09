@@ -4,27 +4,33 @@ import APODPage from "./pages/APODPage"
 import MarsRoverPage from "./pages/MarsRoverPage"
 import EPICPage from "./pages/EPICPage"
 import NEOPage from "./pages/NEOPage"
+import Home from "./pages/Home"
 import MediaLibraryPage from "./pages/MediaLibraryPage"
+import Header from "./components/Header"
 
 function App() {
   return (
     <Router>
-      <div style={styles.container}>
-        <h1>🌌 NASA Data Explorer 🚀</h1>
+      <div className="app-container">
+        <Header />
         <nav style={styles.navbar}>
+          <Link to="/">Home</Link>
           <Link to="/apod">APOD</Link>
           <Link to="/mars-rover">Mars Rover</Link>
           <Link to="/epic">EPIC</Link>
           <Link to="/neo">Near-Earth Objects</Link>
           <Link to="/media-library">NASA Media</Link>
         </nav>
-        <Routes>
-          <Route path="/apod" element={<APODPage />} />
-          <Route path="/mars-rover" element={<MarsRoverPage />} />
-          <Route path="/epic" element={<EPICPage />} />
-          <Route path="/neo" element={<NEOPage />} />
-          <Route path="/media-library" element={<MediaLibraryPage />} />
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/apod" element={<APODPage />} />
+            <Route path="/mars-rover" element={<MarsRoverPage />} />
+            <Route path="/epic" element={<EPICPage />} />
+            <Route path="/neo" element={<NEOPage />} />
+            <Route path="/media-library" element={<MediaLibraryPage />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   )

@@ -11,7 +11,7 @@ const MarsRoverPage = () => {
   }, [])
 
   return (
-    <div style={styles.page}>
+    <div className="api-section" div style={styles.page}>
       <h2>🔴 Mars Rover Photos</h2>
       <div style={styles.gallery}>
         {photos.map((photo) => (

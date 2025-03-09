@@ -11,7 +11,7 @@ const NASA_API_KEY = process.env.NASA_API_KEY || "DEMO_KEY"
 const cache = {}
 const CACHE_DURATION = 5 * 60 * 1000
 
-// 🌌 APOD Route
+// APOD Route
 app.get("/api/apod", async (req, res) => {
   try {
     const response = await axios.get(
@@ -24,7 +24,7 @@ app.get("/api/apod", async (req, res) => {
   }
 })
 
-// 🔴 Mars Rover Route
+// Mars Rover Route
 app.get("/api/mars-rover", async (req, res) => {
   if (cache.mars && Date.now() - cache.mars.timestamp < CACHE_DURATION) {
     console.log("Serving Mars Rover data from cache")
@@ -43,7 +43,20 @@ app.get("/api/mars-rover", async (req, res) => {
   }
 })
 
-// 🌍 EPIC Route
+// Neo
+app.get("/api/neo", async (req, res) => {
+  try {
+    const response = await axios.get(
+      `https://api.nasa.gov/neo/rest/v1/feed?api_key=${NASA_API_KEY}`
+    )
+    res.json(response.data)
+  } catch (error) {
+    console.error("Error fetching NEO data:", error)
+    res.status(500).json({ error: "Failed to fetch NEO data" })
+  }
+})
+
+// EPIC Route
 app.get("/api/epic", async (req, res) => {
   try {
     const response = await axios.get(
@@ -70,7 +83,7 @@ app.get("/api/epic", async (req, res) => {
   }
 })
 
-// 📸 NASA Media Library Route
+// NASA Media Library Route
 app.get("/api/media", async (req, res) => {
   try {
     const response = await axios.get(

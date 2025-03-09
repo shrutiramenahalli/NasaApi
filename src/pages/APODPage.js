@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
 import { BounceLoader } from "react-spinners"
-import { BounceLoader } from "react-spinners"
 
 const APODPage = () => {
   const [data, setData] = useState(null)
@@ -15,7 +14,7 @@ const APODPage = () => {
   }, [])
 
   return (
-    <div style={styles.page}>
+    <div className="api-section" style={styles.page}>
       <h2>🌠 Astronomy Picture of the Day</h2>
       {data ? (
         <>

@@ -1,11 +1,31 @@
-import React from "react"
-import NeoChart from "../components/NeoChart" // Ensure you have this component
+import React, { useEffect, useState } from "react"
+import NeoChart from "../components/NeoChart"
 
 const NEOPage = () => {
+  const [neoData, setNeoData] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/neo")
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch NEO data")
+        return res.json()
+      })
+      .then((data) => {
+        console.log("Fetched NEO Data:", data)
+        const neoObjects = Object.values(data.near_earth_objects).flat()
+        const formattedData = neoObjects.slice(0, 10).map((neo) => ({
+          name: neo.name,
+          diameter: neo.estimated_diameter.kilometers.estimated_diameter_max,
+        }))
+        setNeoData(formattedData)
+      })
+      .catch((error) => console.error("Error fetching NEO data:", error))
+  }, [])
+
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <h2>☄️ Near-Earth Objects</h2>
-      <NeoChart />
+    <div className="api-section">
+      <h2>🌍 Near-Earth Objects</h2>
+      <NeoChart data={neoData} />
     </div>
   )
 }
