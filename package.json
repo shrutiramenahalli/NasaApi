@@ -60,5 +60,6 @@
   "engines": {
     "node": "18.x",
     "npm": "10.x"
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
