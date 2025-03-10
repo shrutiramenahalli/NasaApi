@@ -29,10 +29,10 @@
     "webpack-dev-server": "^5.2.0"
   },
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "node backend/server.js",
-    "build": "cd frontend && npm install && npm run build && cp -r frontend/build .",
-    "heroku-postbuild": "npm run build"
+    "start": "node server.js",
+    "server": "node server.js",
+    "build": "cd frontend && npm run build",
+    "heroku-postbuild": "npm install && npm run build"
   },
   "eslintConfig": {
     "extends": [
