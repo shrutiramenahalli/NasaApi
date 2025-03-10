@@ -7,8 +7,8 @@ const EPICPage = () => {
     fetch("https://nasa-explorer-app-00eacef84580.herokuapp.com/api/epic")
       .then((res) => res.json())
       .then((data) => {
-        console.log("EPIC API Response:", data) // Debugging
-        setImages(data.slice(0, 10)) // Show 10 images
+        console.log("EPIC API Response:", data)
+        setImages(data.slice(0, 10))
       })
       .catch((error) => console.error("Error fetching EPIC data:", error))
   }, [])
