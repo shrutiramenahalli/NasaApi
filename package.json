@@ -29,8 +29,8 @@
     "webpack-dev-server": "^5.2.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "server": "node server.js",
+    "start": "node  backend/server.js",
+    "server": "node  backend/server.js",
     "build": "npm install && npm run build-react",
     "build-react": "react-scripts build",
     "heroku-postbuild": "npm run build"
