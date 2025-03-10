@@ -8,6 +8,13 @@ import Home from "./pages/Home"
 import MediaLibraryPage from "./pages/MediaLibraryPage"
 import Header from "./components/Header"
 
+const cors = require("cors")
+app.use(
+  cors({
+    origin: "https://nasa-explorer-app-00eacef84580.herokuapp.com",
+  })
+)
+
 function App() {
   return (
     <Router>
