@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# NASA Explorer Application 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web application that uses NASA's API to fetch and display Earth and space-related data. The app is designed with a **React-based frontend** and a **Node.js backend** to handle API calls and manage the server.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Live Demo 🌐
 
-### `npm start`
+You can access the live version of the application here:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔗 [Live Link - NASA Explorer](https://nasa-explorer-app-00eacef84580.herokuapp.com)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## GitHub Repository 📂
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Access the source code and explore the application on GitHub:
 
-### `npm run build`
+🔗 [GitHub Repository - NASA Explorer](https://github.com/yourusername/nasa-explorer)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Example File Structure 🗂
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+├── frontend/                   # React frontend application
+│   ├── src/                    # React source files
+│   ├── public/                 # Public assets like index.html
+│   └── package.json            # Frontend dependencies
+├── backend/                    # Node.js backend server
+│   ├── server.js               # Main server file
+│   └── package.json            # Backend dependencies
+├── .gitignore                  # Ignored files for git
+├── README.md                   # Project documentation
+└── package.json                # Main package.json for the project
 
-### `npm run eject`
+## Prerequisites 💻
+Before you begin, ensure you have the following installed:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Node.js (v18.x)
+npm (v10.x)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Setting Up the Application Locally 🔧
+1. Clone the repository
+bash
+Copy
+git clone https://github.com/yourusername/nasa-explorer.git
+cd nasa-explorer
+2. Install Dependencies
+First, install the necessary dependencies for both frontend and backend.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+Copy
+# Install dependencies for the entire project
+npm install
+3. Run the Application Locally 🚀
+Backend
+In the backend directory, run:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+bash
+Copy
+cd backend
+npm install
+npm start
+This starts the backend server.
 
-## Learn More
+Frontend
+In a separate terminal, navigate to the frontend directory and run:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+bash
+Copy
+cd frontend
+npm install
+npm start
+This starts the frontend development server.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# The frontend will be available at http://localhost:3000 and the backend at http://localhost:5000 (or another port if configured).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Testing the Application 🧪
+Once both servers are running locally, open your browser and navigate to http://localhost:3000 to interact with the application.
