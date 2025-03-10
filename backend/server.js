@@ -87,11 +87,17 @@ app.get("/api/media", async (req, res) => {
   }
 })
 
-// Serve React Frontend AFTER defining API routes
 app.use(express.static(path.join(__dirname, "frontend/build")))
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend/build", "index.html"))
+  res.sendFile(
+    path.join(__dirname, "frontend/build", "index.html"),
+    function (err) {
+      if (err) {
+        res.status(500).send(err)
+      }
+    }
+  )
 })
 
 // Start the Server
