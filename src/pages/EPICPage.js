@@ -4,7 +4,7 @@ const EPICPage = () => {
   const [images, setImages] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/epic")
+    fetch("https://nasa-explorer-app-00eacef84580.herokuapp.com/api/epic")
       .then((res) => res.json())
       .then((data) => {
         console.log("EPIC API Response:", data) // Debugging

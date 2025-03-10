@@ -7,7 +7,7 @@ const APODPage = () => {
   const [data, setData] = useState(null)
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/apod")
+    fetch("https://nasa-explorer-app-00eacef84580.herokuapp.com/api/apod")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching APOD:", error))

@@ -6,7 +6,7 @@ const MediaLibraryPage = () => {
   const [media, setMedia] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/media")
+    fetch("https://nasa-explorer-app-00eacef84580.herokuapp.com/api/media")
       .then((res) => res.json())
       .then((data) => {
         setMedia(data.collection.items.slice(0, 10))

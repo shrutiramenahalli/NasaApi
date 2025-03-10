@@ -4,7 +4,7 @@ const MarsRoverPage = () => {
   const [photos, setPhotos] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/mars-rover")
+    fetch("https://nasa-explorer-app-00eacef84580.herokuapp.com/api/mars-rover")
       .then((res) => res.json())
       .then((data) => setPhotos(data.photos.slice(0, 10))) // Get 10 images
       .catch((error) => console.error("Error fetching Mars photos:", error))

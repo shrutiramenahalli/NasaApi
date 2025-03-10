@@ -5,7 +5,7 @@ const NEOPage = () => {
   const [neoData, setNeoData] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/neo")
+    fetch("https://nasa-explorer-app-00eacef84580.herokuapp.com/api/neo")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch NEO data")
         return res.json()
